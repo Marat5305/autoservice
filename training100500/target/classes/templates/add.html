@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+<div>
+
+</div>
+<header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Главная</a></li>
+        <li class="nav-item"><a href="/add/info" class="nav-link">Узнать статус работ</a></li>
+        <li class="nav-item"><a href="/add/AllInfoAdmin" class="nav-link">Для сотрудников</a></li>
+        <li class="nav-item"><a href="/add/contacts" class="nav-link">Контакты</a></li>
+        <li class="nav-item"><a href="/add" class="nav-link">Подать заявку</a></li>
+        <li class="nav-item">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Выйти"/>
+            </form>
+        </li>
+    </ul>
+</header>
+<div class="container mt-5 mb-5">
+    <h1>Подать заявку</h1>
+    <h2>Заполните поля</h2>
+    <form action="/index/add" method="post">
+        <input type="text" name="fio" placeholder="ФИО" class="form-control"><br>
+        <input type="text" name="carModel" placeholder="Марка и модель автомобиля" class="form-control"><br>
+        <input type="text" name="damages" placeholder="Повреждения автомобиля" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Подать заявку</button>
+    </form>
+</div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2005–2021 ПроСервис</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+</footer>
+</body>
+</html>

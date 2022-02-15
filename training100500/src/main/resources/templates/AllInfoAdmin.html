@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Только для админов</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+<header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Узнать статус работ</a></li>
+        <li class="nav-item"><a href="AllInfoAdmin.html" class="nav-link">Для сотрудников</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li><br>
+        <br><li class="nav-item"><a href="add.html">Подать заявку</a></li><br>
+        <li class="nav-item">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Выйти"/>
+            </form>
+        </li>
+    </ul>
+</header>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2005–2021 ПроСервис</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+</footer>
+</body>
+</html>
